@@ -1,3 +1,5 @@
+// File for testing the app component
+
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 

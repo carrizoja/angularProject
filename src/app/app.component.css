@@ -1,0 +1,23 @@
+/* Set grids */
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+}
+
+.navbar {
+    background-image: linear-gradient(to bottom, #08c6f6, #0b5ef7);
+    margin-top: 10px;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.students {
+    background-image: linear-gradient(to right, #b0e3f1, #a7c1f1);
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px 5px 5px 5px;
+}
