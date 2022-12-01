@@ -13,7 +13,8 @@ export class StudentsPageComponent implements OnInit {
   students: Student[] = [
     new Student(1,'Lionel', 'Messi', new Date('1987-06-24'), true),
     new Student(2,'Jose', 'Carrizo', new Date('1982-09-24'), true),
-    new Student(3,'Son', 'Goku', new Date('1986-03-02'), true),
+    new Student(3,'Saint', 'Seiya', new Date('1986-03-02'), true),
+    new Student(3,'Gustavo', 'Cerati', new Date('1959-11-08'), true),
   ]
   constructor() { }
 
