@@ -1,0 +1,58 @@
+<p>Componente de Interpolación</p>
+<!-- <div class="class-example">
+    {{name.toUpperCase() + "HTML"}}
+</div> -->
+
+<div [ngClass]="name ? 'class-example': ''" [style.font-size]="name ? '20px' : '10px'">
+    {{name ? name : 'empty'}}
+</div>
+<br>
+
+<button (click)="name='Example Text'">Asign text</button>
+
+<button (click)="name='Example Text'">Remove text</button>
+<br>
+<div appMyDirective>
+    Conection with directive
+</div>
+<br><br>
+<ul>
+    <li *ngFor="let namePerson of persons">
+        Name: {{namePerson}}
+    </li>
+</ul>
+<br><br>
+<div *ngIf="flag">
+    the flag is enabled
+</div>
+<button (click)="flag=true">Encender bandera</button>
+<button (click)="flag=false">Apagar bandera</button>
+<br>
+<br>
+<div [ngSwitch]="switchValue">
+    <span *ngSwitchCase="'valor1'">Valor 1</span>
+    <p *ngSwitchCase="'valor2'">Valor 2</p>
+    <strong *ngSwitchCase="'valor3'">Valor 3</strong>
+</div>
+<button (click)="switchValue='valor1'">1</button>
+<button (click)="switchValue='valor2'">2</button>
+<button (click)="switchValue='valor3'">3</button>
+<br><br>
+<button (click)="sayHello()">Click me!</button>
+<br>
+<br>
+<p>
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="name" />
+</p>
+<p>
+    <label for="lastname">Lastname:</label>
+    <input id="lastname" [(ngModel)]="lastname" />
+</p>
+<button (click)="seeData()">Show</button>
+<button (click)="loadData()">Load</button>
+
+<br>
+<div>
+    Today is {{today | date:'short'}}<br> {{25.5 | currency:'USD':true}}<br> {{'My text Pipe' | myPipe: 'uppercase'}}
+</div>
