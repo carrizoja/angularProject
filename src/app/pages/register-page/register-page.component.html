@@ -29,6 +29,9 @@
                             <div class="col-6">
                                 <label class="form-label" for="repeatPassword"> Repeat Password</label>
                                 <input [formControl]="repeatPasswordControl" class="form-control" type="password">
+                                <small>
+                                    <span class="text-danger" *ngIf="passwordControl.value !== repeatPasswordControl.value">Passwords must match</span>
+                                </small>
                                 <app-error-helper [control]="repeatPasswordControl"></app-error-helper>
                             </div>
                             <div class="col-8">
