@@ -7,9 +7,12 @@ import { StudentsComponent } from './layout/students/students.component';
 import { InterpolacionComponent } from './clase4/interpolacion/interpolacion/interpolacion.component';
 import { MyDirectiveDirective } from './clase4/my-directive.directive';
 import { MyPipePipe } from './clase4/my-pipe.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StudentsPageComponent } from './pages/students-page/students-page.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { FormulariosComponent } from './clase6/formularios/formularios/formularios.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { ErrorHelperComponent } from './components/error-helper/error-helper.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +24,15 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     MyDirectiveDirective,
     MyPipePipe,
     StudentsPageComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    FormulariosComponent,
+    RegisterPageComponent,
+    ErrorHelperComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

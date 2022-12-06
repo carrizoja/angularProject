@@ -1,0 +1,77 @@
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Register Form</h5>
+                <div class="row">
+                    <div class="col-12">
+                        <form [formGroup]="registerForm" class="row g-3" (ngSubmit)="onSubmit()">
+                            <div class="col-6">
+                                <label class="form-label" for="firstName">Firstname</label>
+                                <input [formControl]="firstNameControl" class="form-control" type="text">
+                                <app-error-helper [control]="firstNameControl"></app-error-helper>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label" for="lastName">Lastname</label>
+                                <input [formControl]="lastNameControl" class="form-control" type="text">
+                                <app-error-helper [control]="lastNameControl"></app-error-helper>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="email">Email</label>
+                                <input [formControl]="emailControl" class="form-control" type="email">
+                                <app-error-helper [control]="emailControl"></app-error-helper>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label" for="password">Password</label>
+                                <input [formControl]="passwordControl" class="form-control" type="password">
+                                <app-error-helper [control]="passwordControl"></app-error-helper>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label" for="repeatPassword"> Repeat Password</label>
+                                <input [formControl]="repeatPasswordControl" class="form-control" type="password">
+                                <app-error-helper [control]="repeatPasswordControl"></app-error-helper>
+                            </div>
+                            <div class="col-8">
+                                <label class="form-label" for="streetName"> Street</label>
+                                <input [formControl]="streetNameControl" class="form-control" type="text">
+                                <app-error-helper [control]="streetNameControl"></app-error-helper>
+                            </div>
+                            <div class="col-4">
+                                <label class="form-label" for="streetNumber"> Number</label>
+                                <input [formControl]="streetNumberControl" class="form-control" type="text">
+                                <app-error-helper [control]="streetNumberControl"></app-error-helper>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <div class="form-check">
+                                    <input [formControl]="signedTermsControl" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      Acept terms and conditions
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <select [formControl]="selectedCountryControl" class="form-select">
+                                    <option value="" selected disabled hidden>Choose here</option>
+                                    <option value="ar">Argentina</option>
+                                    <option value="br">Brasil</option>
+                                    <option value="cl">Chile</option>
+                                    <option value="mx">México</option>
+                                </select>
+                                <app-error-helper [control]="selectedCountryControl"></app-error-helper>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <button [disabled]="registerForm.invalid" class="btn btn-primary">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!--  <div class="col-12">
+                        <h3>Id valid? {{registerForm.valid}</h3>
+                        <pre>
+                            {{registerForm.value | json}}}
+                        </pre>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

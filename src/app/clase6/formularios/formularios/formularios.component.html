@@ -1,0 +1,26 @@
+<div class="m-4">
+    <form [formGroup]="formularioPrincipal" (ngSubmit)="submit()" [ngClass]="formularioPrincipal.invalid && formularioPrincipal.dirty ? 'error':''">
+        Nombre: <input type="text" formControlName="nombre" required>
+        <br>
+        <span *ngIf="formularioPrincipal.get('nombre')?.invalid && formularioPrincipal.get('nombre')?.dirty">El nombre es incorrecto</span> Edad: <input type="text" formControlName="edad"> Genero: <input type="text" formControlName="genero">
+        <button type="submit">Confirmar</button>
+    </form>
+    <br> {{formularioPrincipal.valid ? 'Valido':'Invalido'}}
+    <br> {{formularioPrincipal.get('nombre')?.value | json}}
+</div>
+<br>
+<br>
+<br>
+<br>
+<h4>Heroe</h4>
+<form #heroForm="ngForm" (ngSubmit)="submit2()">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" [(ngModel)]="heroe.name" required>
+    </div>
+    <div>
+        <label for="name">power</label>
+        <input type="text" name="power" id="power" [(ngModel)]="heroe.power">
+    </div>
+    <button type="submit" [disabled]="!heroForm.form.valid">Submit</button>
+</form>
